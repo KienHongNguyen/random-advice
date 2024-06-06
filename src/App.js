@@ -14,7 +14,6 @@ class App extends React.Component {
         axios.get(`https://api.adviceslip.com/advice?timestamp=${new Date()}`)            .then((response) => {
                 const { advice } = response.data.slip;
                 this.setState({ advice });
-                console.log({advice});
             })
             .catch((error) => {
                 console.log(error);
